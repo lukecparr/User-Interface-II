@@ -56,12 +56,18 @@ html {
 
 /*End font-size reset*/
 
+
+
+* {
+    box-sizing: border-box;
+}
+
 .flex {
     display: flex;
 }
 
 .main-container {
-    width: 1100px;
+    max-width: 1100px;
     margin: auto;
 }
 
@@ -105,7 +111,7 @@ a:hover {
 }
 
 .main {
-    width: 70vh;
+    max-width: 70vh;
     margin: 3rem auto;
 }
 
@@ -120,6 +126,7 @@ section p {
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     font-size: 1.7rem;
+    line-height: 2.5rem;
 }
 
 #img-container-horiz {
@@ -127,13 +134,17 @@ section p {
 }
 
 #img-container-horiz img {
-    box-sizing: border-box;
     width: 100%;
 }
 
 #img-container-vert {
     justify-content: space-between;
-    margin: 3rem 0
+    margin: 3rem 0;
+    padding: 0 2rem;
+}
+
+#img-container-vert>div>img {
+    max-width: 100px;
 }
 
 #text {
@@ -152,10 +163,71 @@ section p {
     font-size: 6rem;
 }
 
+#point-up {
+    display: none;
+}
+
 footer {
     background-color: blanchedalmond;
     padding: 2rem;
 }
+
+
+
+@media (max-width: 800px) {
+
+    .top {
+        flex-flow: column;
+        align-items: center;
+    }
+    
+    .top>a {
+        width: 11rem;
+        margin: .2em auto;
+        text-align: center;
+    }
+    
+    .top>a>div {
+        margin: 0;
+        
+    }
+    
+    #img-container-vert {
+        flex-flow: row wrap;
+        justify-content: space-around;
+        margin: 0;
+    }
+    
+    #img-container-vert>div {
+        margin: 2rem;
+    }
+    
+    #img-container-vert>div>img {
+        max-width: none;
+        max-height: 70vw;
+    }
+    
+    #text {
+        padding: 0;
+    }
+    
+    #point-up {
+        display: inline;
+    }
+    
+    #point-left {
+        display: none;
+    }
+}
+
+@media (max-width: 500px) {
+    #img-container-vert>div>img {
+    }
+}
+
+
+
+
 
 
 
