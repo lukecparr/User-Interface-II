@@ -221,7 +221,19 @@ footer {
 }
 
 @media (max-width: 500px) {
+    #img-container-vert {
+        flex-flow: column nowrap;
+        align-content: center;
+        
+    }
+    
+    #img-container-vert>div {
+        width: 95%;
+        text-align: center;
+    }
+    
     #img-container-vert>div>img {
+        max-height: none;
     }
 }
 
